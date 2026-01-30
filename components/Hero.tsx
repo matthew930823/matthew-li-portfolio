@@ -11,36 +11,39 @@ const Hero: React.FC = () => {
       <div className="absolute top-0 -right-4 w-72 h-72 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
       <div className="absolute -bottom-8 left-20 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
 
-      <div className="container mx-auto px-4 z-10 grid md:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-6 md:px-8 lg:px-4 z-10 grid md:grid-cols-2 gap-12 md:gap-16 items-center py-8 md:py-0">
         {/* Text Content */}
-        <div className="text-center md:text-left space-y-6 px-4 md:px-0">
-            <div className="inline-block px-5 py-2 rounded-full bg-cyan-900/30 border border-cyan-500/30 text-cyan-400 text-sm font-mono mb-2">
-                尋求實習機會中 (Available for Internship)
+        <div className="text-center md:text-left space-y-4 md:space-y-6">
+            <div className="inline-block px-4 py-2 md:px-5 md:py-2 rounded-full bg-cyan-900/30 border border-cyan-500/30 text-cyan-400 text-xs sm:text-sm font-mono mb-2 max-w-full">
+                <span className="block sm:inline">尋求實習機會中</span>
+                <span className="block sm:inline"> (Available for Internship)</span>
             </div>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight py-2">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight py-2">
             嗨，我是 <br />
             <span className="gradient-text">{PERSONAL_INFO.name.split('(')[0]}</span>
           </h1>
-          <h2 className="text-xl md:text-2xl text-gray-400 font-mono py-1">
+          <h2 className="text-lg sm:text-xl md:text-2xl text-gray-400 font-mono py-1">
              {`<${PERSONAL_INFO.title}>`}
           </h2>
-          <p className="text-gray-400 max-w-lg mx-auto md:mx-0 leading-relaxed py-2">
+          <p className="text-sm sm:text-base text-gray-400 max-w-lg mx-auto md:mx-0 leading-relaxed py-2 px-2 md:px-0">
             {PERSONAL_INFO.bio}
           </p>
 
-          <div className="flex gap-6 justify-center md:justify-start text-gray-400 pt-8 pb-4">
-             <div className="flex items-center gap-2 text-sm px-3 py-2 rounded-lg bg-slate-800/50">
-                <MapPin className="w-4 h-4 text-cyan-500" /> {PERSONAL_INFO.location.split(',')[0]}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start text-gray-400 pt-6 md:pt-8 pb-4">
+             <div className="flex items-center justify-center md:justify-start gap-2 text-xs sm:text-sm px-4 py-2.5 rounded-lg bg-slate-800/50 hover:bg-slate-800/70 transition-colors">
+                <MapPin className="w-4 h-4 text-cyan-500 flex-shrink-0" /> 
+                <span className="truncate">{PERSONAL_INFO.location.split(',')[0]}</span>
              </div>
-             <div className="flex items-center gap-2 text-sm px-3 py-2 rounded-lg bg-slate-800/50">
-                <Smartphone className="w-4 h-4 text-cyan-500" /> {PERSONAL_INFO.phone}
+             <div className="flex items-center justify-center md:justify-start gap-2 text-xs sm:text-sm px-4 py-2.5 rounded-lg bg-slate-800/50 hover:bg-slate-800/70 transition-colors">
+                <Smartphone className="w-4 h-4 text-cyan-500 flex-shrink-0" /> 
+                <span>{PERSONAL_INFO.phone}</span>
              </div>
           </div>
         </div>
 
         {/* Visual/Image Content */}
-        <div className="relative group perspective-1000">
-          <div className="relative w-72 h-72 md:w-96 md:h-96 mx-auto transition-transform duration-500 transform group-hover:rotate-y-12 preserve-3d">
+        <div className="relative group perspective-1000 mt-8 md:mt-0">
+          <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto transition-transform duration-500 transform group-hover:rotate-y-12 preserve-3d">
             {/* Spinning ring */}
             <div className="absolute inset-0 rounded-full border-2 border-dashed border-cyan-500/30 animate-[spin_10s_linear_infinite]"></div>
             <div className="absolute inset-4 rounded-full border border-purple-500/30 animate-[spin_15s_linear_infinite_reverse]"></div>
@@ -57,10 +60,10 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Floating Badges */}
-            <div className="absolute -right-4 top-10 glass-panel px-4 py-2 rounded-xl text-xs font-bold text-cyan-300 animate-bounce delay-100 shadow-lg border-cyan-500/20 z-20">
+            <div className="absolute -right-2 sm:-right-4 top-8 sm:top-10 glass-panel px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-[10px] sm:text-xs font-bold text-cyan-300 animate-bounce delay-100 shadow-lg border-cyan-500/20 z-20">
                 軟體開發
             </div>
-            <div className="absolute -left-4 bottom-20 glass-panel px-4 py-2 rounded-xl text-xs font-bold text-purple-300 animate-bounce delay-300 shadow-lg border-purple-500/20 z-20">
+            <div className="absolute -left-2 sm:-left-4 bottom-16 sm:bottom-20 glass-panel px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl text-[10px] sm:text-xs font-bold text-purple-300 animate-bounce delay-300 shadow-lg border-purple-500/20 z-20">
                 AI 研究
             </div>
           </div>

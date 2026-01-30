@@ -37,17 +37,17 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 w-full z-40 transition-all duration-300 ${scrolled ? 'bg-slate-900/90 backdrop-blur-md shadow-lg border-b border-white/5' : 'bg-transparent'}`}>
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="container mx-auto px-6 md:px-8 lg:px-4 py-3 sm:py-4 flex justify-between items-center">
         <a 
           href="#home" 
           onClick={(e) => handleNavClick(e, '#home')}
-          className="text-xl font-bold font-mono tracking-tighter"
+          className="text-lg sm:text-xl font-bold font-mono tracking-tighter"
         >
           <span className="text-cyan-500">MATTHEW</span><span className="text-white">.DEV</span>
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex gap-8">
+        <div className="hidden md:flex gap-6 lg:gap-8">
           {navLinks.map(link => (
             <a 
               key={link.name} 
@@ -61,20 +61,20 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Mobile Toggle */}
-        <button className="md:hidden text-white" onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <X /> : <Menu />}
+        <button className="md:hidden text-white p-2" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-slate-900 border-b border-white/10 p-4 flex flex-col gap-4 shadow-2xl">
+        <div className="md:hidden absolute top-full left-0 w-full bg-slate-900/95 backdrop-blur-md border-b border-white/10 py-2 flex flex-col shadow-2xl">
           {navLinks.map(link => (
             <a 
               key={link.name} 
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
-              className="text-gray-300 hover:text-cyan-400 py-2 border-b border-white/5 last:border-0 cursor-pointer"
+              className="text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50 px-6 py-3 border-b border-white/5 last:border-0 cursor-pointer transition-colors"
             >
               {link.name}
             </a>

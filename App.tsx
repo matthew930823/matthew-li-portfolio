@@ -14,7 +14,7 @@ const App: React.FC = () => {
       <Experience />
       <Projects />
       
-      <footer className="py-8 text-center text-gray-500 text-sm border-t border-white/5">
+      <footer className="py-6 sm:py-8 text-center text-gray-500 text-xs sm:text-sm border-t border-white/5 px-6">
         <p>© {new Date().getFullYear()} Matthew Li. 使用 React & Tailwind 建構。</p>
       </footer>
     </div>
