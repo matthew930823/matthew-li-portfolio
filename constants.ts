@@ -1,5 +1,7 @@
 import { Project, Experience, SkillCategory, SocialLink } from './types';
 import { Code, Smartphone, Brain, Gamepad2, Database, Layout } from 'lucide-react';
+import Ghote_Photo from './components/Ghote_icon.png';
+import AI_Photo from './components/AI_Image_Generation_Tutor.png';
 
 export const PERSONAL_INFO = {
   name: "李孟修 (Matthew)",
@@ -59,14 +61,14 @@ export const PROJECTS: Project[] = [
     description: "使用 Flutter 建構的 AI 輔助學習助手。從學習材料中提取核心知識，將其結構化，並使用主動回憶（字卡/測驗）來提升學習效率。",
     tags: ["Flutter", "AI", "Education", "Mobile"],
     link: "https://github.com/ghote-app/ghote",
-    image: "https://picsum.photos/id/20/800/450"
+    image: Ghote_Photo
   },
   {
     title: "互動式圖像生成助教",
     description: "畢業專案：結合 LLM 和圖像生成模型的教育平台。具有使用 CosyVoice 和 Live2D 的對話代理，引導使用者掌握 AI 圖像生成技術。",
     tags: ["Python", "LLM", "Stable Diffusion", "React/Web"],
     link: "https://github.com/matthew930823/AI-Image-Generation-Tutor",
-    image: "https://picsum.photos/id/60/800/450"
+    image: AI_Photo
   },
   {
     title: "LINE AI 聊天機器人",
