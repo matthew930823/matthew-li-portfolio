@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
                {/* Using a placeholder because I don't have the real image file, but using an abstract tech avatar for effect */}
                <img 
                  src={myPhoto} 
-                 alt="Matthew Li" 
+                 alt="Matthew Lee" 
                  className="w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-500"
                />
                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-40"></div>
