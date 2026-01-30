@@ -13,26 +13,26 @@ const Hero: React.FC = () => {
 
       <div className="container mx-auto px-4 z-10 grid md:grid-cols-2 gap-12 items-center">
         {/* Text Content */}
-        <div className="text-center md:text-left space-y-6">
-            <div className="inline-block px-3 py-1 rounded-full bg-cyan-900/30 border border-cyan-500/30 text-cyan-400 text-sm font-mono mb-2">
+        <div className="text-center md:text-left space-y-6 px-4 md:px-0">
+            <div className="inline-block px-5 py-2 rounded-full bg-cyan-900/30 border border-cyan-500/30 text-cyan-400 text-sm font-mono mb-2">
                 尋求實習機會中 (Available for Internship)
             </div>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight py-2">
             嗨，我是 <br />
             <span className="gradient-text">{PERSONAL_INFO.name.split('(')[0]}</span>
           </h1>
-          <h2 className="text-xl md:text-2xl text-gray-400 font-mono">
+          <h2 className="text-xl md:text-2xl text-gray-400 font-mono py-1">
              {`<${PERSONAL_INFO.title}>`}
           </h2>
-          <p className="text-gray-400 max-w-lg mx-auto md:mx-0 leading-relaxed">
+          <p className="text-gray-400 max-w-lg mx-auto md:mx-0 leading-relaxed py-2">
             {PERSONAL_INFO.bio}
           </p>
 
-          <div className="flex gap-6 justify-center md:justify-start text-gray-400 pt-6">
-             <div className="flex items-center gap-2 text-sm">
+          <div className="flex gap-6 justify-center md:justify-start text-gray-400 pt-8 pb-4">
+             <div className="flex items-center gap-2 text-sm px-3 py-2 rounded-lg bg-slate-800/50">
                 <MapPin className="w-4 h-4 text-cyan-500" /> {PERSONAL_INFO.location.split(',')[0]}
              </div>
-             <div className="flex items-center gap-2 text-sm">
+             <div className="flex items-center gap-2 text-sm px-3 py-2 rounded-lg bg-slate-800/50">
                 <Smartphone className="w-4 h-4 text-cyan-500" /> {PERSONAL_INFO.phone}
              </div>
           </div>
