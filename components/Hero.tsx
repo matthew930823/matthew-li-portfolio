@@ -1,6 +1,6 @@
 import React from 'react';
 import { PERSONAL_INFO } from '../constants';
-import { Github, Linkedin, Mail, Smartphone, MapPin } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin } from 'lucide-react';
 import myPhoto from './photo.jpg';
 
 const Hero: React.FC = () => {
@@ -33,10 +33,6 @@ const Hero: React.FC = () => {
              <div className="flex items-center justify-center md:justify-start gap-2 text-xs sm:text-sm px-4 py-2.5 rounded-lg bg-slate-800/50 hover:bg-slate-800/70 transition-colors">
                 <MapPin className="w-4 h-4 text-cyan-500 flex-shrink-0" /> 
                 <span className="truncate">{PERSONAL_INFO.location.split(',')[0]}</span>
-             </div>
-             <div className="flex items-center justify-center md:justify-start gap-2 text-xs sm:text-sm px-4 py-2.5 rounded-lg bg-slate-800/50 hover:bg-slate-800/70 transition-colors">
-                <Smartphone className="w-4 h-4 text-cyan-500 flex-shrink-0" /> 
-                <span>{PERSONAL_INFO.phone}</span>
              </div>
           </div>
         </div>

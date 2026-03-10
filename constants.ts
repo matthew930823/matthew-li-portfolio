@@ -7,7 +7,6 @@ export const PERSONAL_INFO = {
   name: "李孟修 (Matthew)",
   title: "軟體工程師",
   email: "matthew930823@gmail.com",
-  phone: "0973-707-125",
   location: "台灣台北 (士林區)",
   education: {
     school: "國立臺灣海洋大學 (NTOU)",
